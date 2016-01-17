@@ -1,0 +1,4 @@
+
+
+
+	scp filename usename@ipaddress:/directory/

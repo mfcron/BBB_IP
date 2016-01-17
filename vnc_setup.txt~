@@ -1,0 +1,21 @@
+on x86 client
+-------------
+
+	#apt-get install tightvnc-viewer
+
+
+on BBB 
+------
+
+	#apt-get install tighvncserver
+
+after installation setup the server
+
+	#tightvncserver
+	Password:	//give a password
+	verify: 	//verify by retyping the same password
+	viewonly password(y/n): y
+	
+running the vnc server 
+	vncserver :1 -geometry 1280x800 -depth 24 -dpi 96
+	

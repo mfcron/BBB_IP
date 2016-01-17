@@ -1,0 +1,15 @@
+Dear Mohammad,
+    You can call on the same number. I will make sure it will be available.
+Which image you have ported ? I hope its not angstrom. Still I am sending some code to be runnable in open cv. The corresponding link is below
+http://derekmolloy.ie/beaglebone/beaglebone-video-capture-and-image-processing-on-embedded-linux-using-opencv/
+
+You need to have folowing packages installed:
+
+video4linux
+ffmpeg
+opencv libraries
+
+I suggest you do all above stuff first on your regular PC, then on beagle bone.
+Also, the git clone section of the video in link should be skipped as I am directly giving you the code in zip format.
+
+Reply if any further help.

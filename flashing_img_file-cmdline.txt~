@@ -1,0 +1,26 @@
+Command Line Interface
+
+Be very careful about which /dev device you write to. If your machine is booted up off of disk /dev/sda, and your usb stick is on /dev/sdc, and you accidentally write to /dev/sda instead of /dev/sdc, your filesystem will be irreparably damaged and you will lose all of your files.
+
+    Download the desired .img file
+    Open a terminal and insert your flash media
+
+    Look at the output of sudo dmesg | tail -20 to determine the device node assigned to your flash media (ignore the device number; e.g. /dev/sdc, not sdc1)
+        Example output of dmesg, where the device node is 'sdc':
+
+        [ 5046.396364] usb-storage: device scan complete
+
+        [ 5046.397075] scsi 10:0:0:0: Direct-Access USB Flash Memory 1.00 PQ: 0 ANSI: 0 CCS
+
+        [ 5047.068761] sd 10:0:0:0: [sdc] Mode Sense: 23 00 00 00
+
+        [ 5047.068769] sd 10:0:0:0: [sdc] Assuming drive cache: write through
+
+        [ 5047.075021]  sdc: sdc1
+
+        [ 5047.076459] sd 10:0:0:0: [sdc] Attached SCSI removable disk 
+
+    Run sudo umount /dev/devicenode
+
+    Run sudo dd if=/path/to/downloaded.img of=/dev/devicenode bs=1M
+    Remove your flash media when the command completes (you may need to wait a few extra seconds for it to finish)
