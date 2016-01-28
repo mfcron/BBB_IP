@@ -106,6 +106,8 @@ POOSIBLE CAUSE:
 TRYING;
  	$apt-cache showpkg [package name]
 		shows the package name and dependencies
+________________________________________________
+
 		
 Running the python script at startup
 -----------------------------------
@@ -147,14 +149,19 @@ Method2: ()
 		will create the symbolic links in /etc/rc[2-5].d with S prefix and in /etc/rc[0,1,6].d with K prefix
 		(where [0-9] are runlevels that are states of init and the whole system that defines what system services are operating )
 		
-		
+
+	
+	--> but well it is working for small scripts, for example hello.py is printing a msg and it is being saved continously in a file 	
+			
 ----------------------------------------------------------
 
-Implementing a ftp server:
--------------------------
 
-	$sudo apt-get install vsftpd
-				
+Saving faces captured by device(or just some random files since the camera is not working):
+-------------------------------
+
+	Through ftp:
+		$sudo apt-get install vsftpd
+		----incomplete
 		
 		
 		
