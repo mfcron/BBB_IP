@@ -150,11 +150,7 @@ Method2: ()
 		
 ----------------------------------------------------------
 
-Implementing a ftp server:
--------------------------
-
-	$sudo apt-get install vsftpd
-				
+		
 		
 		
 		
